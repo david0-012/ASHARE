@@ -7,10 +7,10 @@ const cors = require('cors'); // Importamos el módulo 'cors' para permitir soli
 const app = express();
 app.use(express.json());
 app.use(cors()); // Habilitamos el uso de CORS en nuestra aplicación
-
+const port = 3000;
 // Configuración del servidor para escuchar peticiones en el puerto 3000
-app.listen(3000, () => {
-    console.log("Server is running on port 3000"); // Mensaje que se imprime en la consola cuando el servidor se inicia correctamente
+app.listen(port, () => {
+console.log(`Servidor corriendo en: http://localhost:${port}`); // Mensaje que se imprime en la consola cuando el servidor se inicia correctamente
 });
 
 // Conexión a la base de datos MySQL
